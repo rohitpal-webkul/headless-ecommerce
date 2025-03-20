@@ -96,6 +96,7 @@ type Options {
     css: String
     html: String
     images: [Link]
+    services: [ServiceOption]
     filters: [FilterOption]
     column_1: [ColumOption]
     column_2: [ColumOption]
@@ -113,4 +114,10 @@ type ColumOption {
     url: String
     title: String
     sortOrder: String @rename(attribute: "sort_order")
+}
+
+type ServiceOption {
+    title: String
+    description: String
+    service_icon: String 
 }

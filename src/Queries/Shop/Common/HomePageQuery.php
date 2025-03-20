@@ -4,6 +4,7 @@ namespace Webkul\GraphQLAPI\Queries\Shop\Common;
 
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Nuwave\Lighthouse\Support\Contracts\GraphQLContext;
 use Webkul\Attribute\Repositories\AttributeRepository;
 use Webkul\Category\Repositories\CategoryRepository;
@@ -69,7 +70,7 @@ class HomePageQuery extends BaseFilter
                 $images['images'] = [];
 
                 foreach ($item->options['images'] as $i => $element) {
-                    $images['images'][$i] = array_merge($element, ['image_url' => asset('/').$element['image']]);
+                    $images['images'][$i] = array_merge($element, ['image_url' => Storage::url(str_replace('storage/', '', $element['image']))]);
                 }
 
                 $item->options = $images;
@@ -80,7 +81,7 @@ class HomePageQuery extends BaseFilter
 
                 $staticContent['html'] = [];
 
-                $staticContent['html'] = str_replace('src="" data-src="storage', 'src="'.asset('/storage'), $item->options['html']);
+                $staticContent['html'] = str_replace('src="" data-src="storage', 'src="'.Storage::url(''), $item->options['html']);
 
                 $item->options = $staticContent;
             }
