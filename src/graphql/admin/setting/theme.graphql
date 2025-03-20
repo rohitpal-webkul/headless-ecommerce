@@ -96,8 +96,8 @@ type Options {
     css: String
     html: String
     images: [Link]
-    services: [ServiceOption]
     filters: [FilterOption]
+    services: [ServiceOption]
     column_1: [ColumOption]
     column_2: [ColumOption]
     column_3: [ColumOption]
