@@ -209,7 +209,8 @@ class HomePageQuery extends BaseFilter
 
                 $join->on('products.id', '=', 'product_price_indices.product_id')
                     ->where('product_price_indices.customer_group_id', $customerGroup->id);
-            });
+            })
+            ->leftJoin('product_images', 'products.id', '=', 'product_images.product_id');
 
         /**
          * Handle category_id filtering.
