@@ -180,6 +180,18 @@ class HomePageQuery extends BaseFilter
             'visible_individually' => 1,
         ]);
 
+        /**
+         * Handle category_slug filtering.
+         */
+        if (! empty($params['category_slug'])) {
+            $category = $this->categoryRepository->whereHas('translation', function ($q) use ($params) {
+                $q->where('slug', urldecode($params['category_slug']));
+            })->first();
+            
+            unset($params['category_slug']);
+            $params['category_id'] = $category?->id ?? random_int(1000000000, 9999999999);
+        }
+
         $products = $searchEngine === 'elastic'
             ? $this->searchFromElastic($params)
             : $this->searchFromDatabase($params);

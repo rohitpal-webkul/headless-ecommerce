@@ -71,6 +71,7 @@ type Category {
     additional: String
     bannerPath: String @rename(attribute: "banner_path")
     bannerUrl: String @rename(attribute: "banner_url")
+    productCount: Int
     name: String!
     slug: String!
     urlPath: String @rename(attribute: "url_path")
