@@ -133,7 +133,7 @@ type Product {
     name: String
     shortDescription: String @rename(attribute: "short_description")
     description: String
-    urlKey: String @rename(attribute: "url_key")
+    urlKey: String! @rename(attribute: "url_key")
     shareURL: String @field(resolver: "Webkul\\GraphQLAPI\\Queries\\Admin\\Catalog\\Products\\ProductContent@getProductShareUrl")
     new: Boolean
     featured: Boolean
