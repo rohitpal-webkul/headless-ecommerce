@@ -71,7 +71,7 @@ type Category {
     additional: String
     bannerPath: String @rename(attribute: "banner_path")
     bannerUrl: String @rename(attribute: "banner_url")
-    productCount: Int @rename(attribute: "product_count")
+    productCount: productCount @rename(attribute: "product_count")
     name: String!
     slug: String!
     urlPath: String @rename(attribute: "url_path")
@@ -96,4 +96,8 @@ type filterableAttributes {
     isFilterable: Int @rename(attribute: "is_filterable")
     category: Category! @belongsTo(relation: "category")
     options: [AttributeOption!] @hasMany
+}
+
+type productCount {
+    count: String!
 }
