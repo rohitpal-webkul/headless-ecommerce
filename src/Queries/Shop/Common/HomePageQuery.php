@@ -127,6 +127,12 @@ class HomePageQuery extends BaseFilter
     public function getCategories(mixed $rootValue, array $args)
     {
         if (! empty($args['get_category_tree'])) {
+            if (core()->getConfigData('catalog.products.search.engine') == 'elastic'
+                && core()->getConfigData('catalog.products.search.admin_mode') == 'elastic'
+            ) {
+                return $this->categoryRepository->getCategoryTreeFromElastic();
+            }
+            
             return $this->categoryRepository->getVisibleCategoryTree(core()->getCurrentChannel()->root_category_id);
         }
 
