@@ -29,6 +29,10 @@ return [
                 'success'            => 'Sucesso: Cliente registrado e logado com sucesso.',
             ],
 
+            'social-login' => [
+                'disabled' => 'Aviso: Login social está desativado.',
+            ],
+
             'login' => [
                 'invalid-creds' => 'Verifique suas credenciais e tente novamente.',
                 'not-activated' => 'Sua ativação requer aprovação do administrador',
@@ -65,6 +69,7 @@ return [
                     'delete-success'         => 'Endereço excluído com sucesso',
                     'not-found'              => 'Aviso: Endereço não encontrado.',
                     'update-success'         => 'Endereço atualizado com sucesso.',
+                    'already-default'        => 'Aviso: Este endereço já está definido como padrão.',
                 ],
 
                 'wishlist' => [
@@ -358,12 +363,13 @@ return [
                 'login-success'        => 'Cliente logado com sucesso.',
             ],
 
-            'addressess' => [
+            'addresses' => [
                 'create-success'         => 'Endereço do cliente criado com sucesso.',
-                'default-update-success' => 'Endereço definido como padrão',
-                'delete-success'         => 'Endereço do cliente excluído com sucesso',
+                'default-update-success' => 'Endereço definido como padrão.',
+                'delete-success'         => 'Endereço do cliente excluído com sucesso.',
                 'not-found'              => 'Aviso: Endereço do cliente não encontrado.',
                 'update-success'         => 'Endereço do cliente atualizado com sucesso.',
+                'already-default'        => 'Aviso: Este endereço já está definido como padrão.',
             ],
 
             'groups' => [

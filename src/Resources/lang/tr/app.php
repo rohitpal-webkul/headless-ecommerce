@@ -29,6 +29,10 @@ return [
                 'success'            => 'Başarılı: Müşteri başarıyla kaydedildi ve giriş yaptı.',
             ],
 
+            'social-login' => [
+                'disabled' => 'Uyarı: Sosyal giriş devre dışı bırakıldı.',
+            ],
+
             'login' => [
                 'invalid-creds' => 'Lütfen kimlik bilgilerinizi kontrol edin ve tekrar deneyin.',
                 'not-activated' => 'Aktivasyonunuz yönetici onayı gerektirir',
@@ -65,6 +69,7 @@ return [
                     'delete-success'         => 'Adres başarıyla silindi',
                     'not-found'              => 'Uyarı: Adres bulunamadı.',
                     'update-success'         => 'Adres başarıyla güncellendi.',
+                    'already-default'        => 'Uyarı: Bu adres zaten varsayılan olarak ayarlandı.',
                 ],
 
                 'wishlist' => [
@@ -357,12 +362,13 @@ return [
                 'login-success'        => 'Müşteri başarıyla giriş yaptı.',
             ],
 
-            'addressess' => [
+            'addresses' => [
                 'create-success'         => 'Müşterinin adresi başarıyla oluşturuldu.',
-                'default-update-success' => 'Adres varsayılan olarak ayarlandı',
-                'delete-success'         => 'Müşterinin adresi başarıyla silindi',
+                'default-update-success' => 'Adres varsayılan olarak ayarlandı.',
+                'delete-success'         => 'Müşterinin adresi başarıyla silindi.',
                 'not-found'              => 'Uyarı: Müşterinin adresi bulunamadı.',
                 'update-success'         => 'Müşterinin adresi başarıyla güncellendi.',
+                'already-default'        => 'Uyarı: Bu adres zaten varsayılan olarak ayarlandı.',
             ],
 
             'groups' => [

@@ -29,6 +29,10 @@ return [
                 'success'            => 'Éxito: Cliente registrado e iniciado sesión correctamente.',
             ],
 
+            'social-login' => [
+                'disabled' => 'Advertencia: El inicio de sesión social está deshabilitado.',
+            ],
+
             'login' => [
                 'invalid-creds' => 'Por favor verifica tus credenciales e intenta nuevamente.',
                 'not-activated' => 'Tu activación requiere la aprobación del administrador',
@@ -65,6 +69,7 @@ return [
                     'delete-success'         => 'Dirección eliminada correctamente',
                     'not-found'              => 'Advertencia: No se encontró la dirección.',
                     'update-success'         => 'Dirección actualizada correctamente.',
+                    'already-default'        => 'Advertencia: Esta dirección ya está establecida como predeterminada.',
                 ],
 
                 'wishlist' => [
@@ -358,12 +363,13 @@ return [
                 'login-success'        => 'Cliente ha iniciado sesión exitosamente.',
             ],
 
-            'addressess' => [
+            'addresses' => [
                 'create-success'         => 'Dirección del cliente creada exitosamente.',
-                'default-update-success' => 'La dirección se ha establecido como predeterminada',
-                'delete-success'         => 'Dirección del cliente eliminada exitosamente',
+                'default-update-success' => 'La dirección se ha establecido como predeterminada.',
+                'delete-success'         => 'Dirección del cliente eliminada exitosamente.',
                 'not-found'              => 'Advertencia: Dirección del cliente no encontrada.',
                 'update-success'         => 'Dirección del cliente actualizada exitosamente.',
+                'already-default'        => 'Advertencia: Esta dirección ya está establecida como predeterminada.',
             ],
 
             'groups' => [

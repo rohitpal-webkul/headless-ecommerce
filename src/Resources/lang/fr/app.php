@@ -29,6 +29,10 @@ return [
                 'success'            => 'Succès: Client enregistré et connecté avec succès.',
             ],
 
+            'social-login' => [
+                'disabled' => 'Avertissement : La connexion sociale est désactivée.',
+            ],
+
             'login' => [
                 'invalid-creds' => 'Veuillez vérifier vos informations d\'identification et réessayer.',
                 'not-activated' => 'Votre activation nécessite l\'approbation de l\'administrateur',
@@ -65,6 +69,7 @@ return [
                     'delete-success'         => 'Adresse supprimée avec succès',
                     'not-found'              => 'Avertissement: Adresse introuvable.',
                     'update-success'         => 'Adresse mise à jour avec succès.',
+                    'already-default'        => 'Avertissement : Cette adresse est déjà définie comme adresse par défaut.',
                 ],
 
                 'wishlist' => [
@@ -358,12 +363,13 @@ return [
                 'login-success'        => 'Client connecté avec succès.',
             ],
 
-            'addressess' => [
+            'addresses' => [
                 'create-success'         => 'Adresse du client créée avec succès.',
                 'default-update-success' => 'L\'adresse est définie comme adresse par défaut',
                 'delete-success'         => 'Adresse du client supprimée avec succès',
                 'not-found'              => 'Attention : adresse du client introuvable.',
                 'update-success'         => 'Adresse du client mise à jour avec succès.',
+                'already-default'        => 'Attention : Cette adresse est déjà définie comme adresse par défaut.',
             ],
 
             'groups' => [

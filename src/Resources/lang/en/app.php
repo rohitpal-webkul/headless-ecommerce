@@ -29,6 +29,10 @@ return [
                 'success'            => 'Success: Customer registered and login successfully.',
             ],
 
+            'social-login' => [
+                'disabled' => 'Warning: Social login is disabled.',
+            ],
+
             'login' => [
                 'invalid-creds' => 'Please check your credentials and try again.',
                 'not-activated' => 'Your activation requires admin approval',
@@ -65,6 +69,7 @@ return [
                     'delete-success'         => 'Address deleted successfully',
                     'not-found'              => 'Warning: Address not found.',
                     'update-success'         => 'Address updated successfully.',
+                    'already-default'        => 'Warning: This address is already set as default.',
                 ],
 
                 'wishlist' => [
@@ -227,6 +232,11 @@ return [
                         'title'                           => 'GraphQL API',
                         'private-key'                     => 'Private Key JSON File Content',
                         'info-get-private-key'            => 'Info: To Get FCM Private Key JSON File Content: <a href="https://console.firebase.google.com/" target="_blank">Click here</a>',
+                        'credentials'                     => 'Credentials',
+                        'credentials-info'                => 'Info: Used to get essential or curious data like payment method keys, client id, secret key, etc.',
+                        'username'                        => 'Username',
+                        'username-info'                   => 'Info: Used to get essential or curious data like payment method keys, client id, secret key, etc.',
+                        'password'                        => 'Password',
                     ],
 
                     'content' => [
@@ -359,12 +369,13 @@ return [
                 'login-success'        => 'Customer logged in successfully.',
             ],
 
-            'addressess' => [
+            'addresses' => [
                 'create-success'         => 'Customer\'s address created successfully.',
                 'default-update-success' => 'Address is setted as default',
                 'delete-success'         => 'Customer\'s Address deleted successfully',
                 'not-found'              => 'Warning: Customer\'s address not found.',
                 'update-success'         => 'Customer\'s address updated successfully.',
+                'already-default'        => 'Warning: This address is already set as default.',
             ],
 
             'groups' => [

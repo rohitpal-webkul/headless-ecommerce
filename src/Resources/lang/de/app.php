@@ -29,6 +29,10 @@ return [
                 'success'            => 'Erfolg: Kunde erfolgreich registriert und eingeloggt.',
             ],
 
+            'social-login' => [
+                'disabled' => 'Warnung: Social Login ist deaktiviert.',
+            ],
+
             'login' => [
                 'invalid-creds' => 'Bitte überprüfen Sie Ihre Zugangsdaten und versuchen Sie es erneut.',
                 'not-activated' => 'Ihre Aktivierung erfordert die Genehmigung durch den Administrator.',
@@ -65,6 +69,7 @@ return [
                     'delete-success'         => 'Adresse erfolgreich gelöscht.',
                     'not-found'              => 'Warnung: Adresse nicht gefunden.',
                     'update-success'         => 'Adresse erfolgreich aktualisiert.',
+                    'already-default'        => 'Warnung: Diese Adresse ist bereits als Standard festgelegt.',
                 ],
 
                 'wishlist' => [
@@ -358,12 +363,13 @@ return [
                 'login-success'        => 'Kunde erfolgreich eingeloggt.',
             ],
 
-            'addressess' => [
+            'addresses' => [
                 'create-success'         => 'Kundenadresse erfolgreich erstellt.',
                 'default-update-success' => 'Adresse wurde als Standard festgelegt.',
                 'delete-success'         => 'Kundenadresse erfolgreich gelöscht.',
                 'not-found'              => 'Warnung: Kundenadresse nicht gefunden.',
                 'update-success'         => 'Kundenadresse erfolgreich aktualisiert.',
+                'already-default'        => 'Warnung: Diese Adresse ist bereits als Standard festgelegt.',
             ],
 
             'groups' => [

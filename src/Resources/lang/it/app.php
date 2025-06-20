@@ -29,6 +29,10 @@ return [
                 'success'            => 'Successo: Cliente registrato e accesso effettuato con successo.',
             ],
 
+            'social-login' => [
+                'disabled' => 'Avviso: Accesso social disabilitato.',
+            ],
+
             'login' => [
                 'invalid-creds' => 'Controlla le tue credenziali e riprova.',
                 'not-activated' => 'La tua attivazione richiede l\'approvazione dell\'amministratore',
@@ -65,6 +69,7 @@ return [
                     'delete-success'         => 'Indirizzo eliminato con successo',
                     'not-found'              => 'Attenzione: Indirizzo non trovato.',
                     'update-success'         => 'Indirizzo aggiornato con successo.',
+                    'already-default'        => 'Avviso: Questo indirizzo è già impostato come predefinito.',
                 ],
 
                 'wishlist' => [
@@ -358,12 +363,13 @@ return [
                 'login-success'        => 'Cliente accesso effettuato con successo.',
             ],
 
-            'addressess' => [
+            'addresses' => [
                 'create-success'         => 'Indirizzo del cliente creato con successo.',
-                'default-update-success' => 'L\'indirizzo è impostato come predefinito',
-                'delete-success'         => 'Indirizzo del cliente eliminato con successo',
+                'default-update-success' => 'L\'indirizzo è impostato come predefinito.',
+                'delete-success'         => 'Indirizzo del cliente eliminato con successo.',
                 'not-found'              => 'Avviso: Indirizzo del cliente non trovato.',
                 'update-success'         => 'Indirizzo del cliente aggiornato con successo.',
+                'already-default'        => 'Avviso: Questo indirizzo è già impostato come predefinito.',
             ],
 
             'groups' => [

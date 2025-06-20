@@ -3,6 +3,11 @@ extend type Query {
     cartDetail: Cart @field(resolver: "Webkul\\GraphQLAPI\\Mutations\\Shop\\Customer\\CartMutation@cart")
 
     cartItems: [CartItem!] @field(resolver: "Webkul\\GraphQLAPI\\Mutations\\Shop\\Customer\\CartMutation@cartItems")
+
+    getSlots(
+        id: ID!
+        date: String!
+    ): [AvailableBootkingSlot] @field(resolver: "Webkul\\GraphQLAPI\\Queries\\Shop\\Common\\HomePageQuery@getBookingProductSlots")
 }
 
 extend type Mutation {
@@ -30,6 +35,9 @@ input AddItemToCartInput {
     productId: ID! @rename(attribute: "product_id")
     quantity: Int!
 
+    # Used in case of Customizable Option adding Simple & Virtual Product to Cart
+    customizableOptions: [CustomizableOptionInput!] @rename(attribute: "customizable_options")
+
     # Used in case of adding Grouped Product to Cart
     selectedConfigurableOption: Int @rename(attribute: "selected_configurable_option")
     superAttribute: [ConfigurableProductInput!] @rename(attribute: "super_attribute")
@@ -45,6 +53,12 @@ input AddItemToCartInput {
 
     # Used in case of adding booking Product to Cart
     booking: BookingProductInput
+}
+
+input CustomizableOptionInput {
+    id: ID!
+    value: [String]
+    file: [Upload]
 }
 
 input ConfigurableProductInput {
@@ -66,8 +80,11 @@ input BundledOptionsInput {
 input BookingProductInput {
     date: String
     slot: BookingSlotInput
+    dateFrom: String @rename(attribute: "date_from")
+    dateTo: String @rename(attribute: "date_to")
     qty: [EventBookingInput!]
     note: String
+    rentingType: RentingTypeEnumForCart @rename(attribute: "renting_type")
 }
 
 input BookingSlotInput {
@@ -213,4 +230,20 @@ type CartShippingRate {
     updatedAt: DateTime @rename(attribute: "updated_at")
     shippingAddress: Address @belongsTo(relation: "shipping_address")
     formattedPrice: FormattedPrice @field(resolver: "Webkul\\GraphQLAPI\\Queries\\Shop\\Common\\FormattedPrice@getCartShippingRatePriceData")
+}
+
+type AvailableBootkingSlot {
+    from: String
+    to: String
+    timestamp: String
+    qty: Boolean
+    time: String
+    slots: [AvailableBootkingSlot]
+    fromTimestamp: String @rename(attribute: "from_timestamp")
+    toTimestamp: String @rename(attribute: "to_timestamp")
+}
+
+enum RentingTypeEnumForCart {
+    HOURLY @enum(value: "hourly")
+    DAILY @enum(value: "daily")
 }

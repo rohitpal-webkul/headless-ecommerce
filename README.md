@@ -25,7 +25,7 @@
 
 Bagisto's GraphQL API enables a seamless, headless eCommerce experience built on Laravel. This API delivers ultra-fast, dynamic, and personalized shopping experiences through a scalable, open-source platform.
 
-**Read our full documentation: [Bagisto GraphQL API Docs](https://devdocs.bagisto.com/2.2/api/graphql-api.html)**
+**Read our full documentation: [Bagisto GraphQL API Docs](https://devdocs.bagisto.com/2.3/api/graphql-api.html)**
 
 This API was developed in collaboration with the <a href="https://www.ucraft.com/">Ucraft Team</a>.
 
@@ -112,6 +112,31 @@ To install the Bagisto GraphQL API, follow these steps:
    ```
    http://your-domain.com/graphql
    ```
+3. **Authorization**
+
+   To authorize requests for certain APIs, you may need to provide the `MOBIKUL_API_KEY`. 
+
+   1. **Locate the API Key**
+
+      Find the `MOBIKUL_API_KEY` in your `.env` file:
+
+      ```env
+      MOBIKUL_API_KEY=your-mobikul-api-key
+      ```
+
+   2. **Share with App Development Team**
+
+      Copy this key and securely share it with the Development team as required for API authorization.
+
+   3. **Using the API Key**
+
+      When making requests to protected admin endpoints, include the API key in the request headers:
+
+      ```
+      MOBIKUL_API_KEY: your-mobikul-api-key
+      ```
+
+      Replace `your-mobikul-api-key` with the actual value from your `.env` file.
 
 ---
 

@@ -29,6 +29,10 @@ return [
                 'success'            => 'Sukces: Klient został pomyślnie zarejestrowany i zalogowany.',
             ],
 
+            'social-login' => [
+                'disabled' => 'Ostrzeżenie: Logowanie społecznościowe jest wyłączone.',
+            ],
+
             'login' => [
                 'invalid-creds' => 'Sprawdź swoje dane logowania i spróbuj ponownie.',
                 'not-activated' => 'Twoje konto wymaga zatwierdzenia przez administratora.',
@@ -61,10 +65,11 @@ return [
 
                 'addresses' => [
                     'create-success'         => 'Adres został pomyślnie utworzony.',
-                    'default-update-success' => 'Adres został ustawiony jako domyślny',
+                    'default-update-success' => 'Adres został ustawiony jako domyślny.',
                     'delete-success'         => 'Adres został pomyślnie usunięty.',
                     'not-found'              => 'Ostrzeżenie: Nie znaleziono adresu.',
                     'update-success'         => 'Adres został pomyślnie zaktualizowany.',
+                    'already-default'        => 'Ostrzeżenie: Ten adres jest już ustawiony jako domyślny.',
                 ],
 
                 'wishlist' => [
@@ -358,12 +363,13 @@ return [
                 'login-success'        => 'Klient został pomyślnie zalogowany.',
             ],
 
-            'addressess' => [
+            'addresses' => [
                 'create-success'         => 'Adres klienta został pomyślnie utworzony.',
                 'default-update-success' => 'Adres został ustawiony jako domyślny.',
                 'delete-success'         => 'Adres klienta został pomyślnie usunięty.',
                 'not-found'              => 'Ostrzeżenie: Adres klienta nie został znaleziony.',
                 'update-success'         => 'Adres klienta został pomyślnie zaktualizowany.',
+                'already-default'        => 'Ostrzeżenie: Ten adres jest już ustawiony jako domyślny.',
             ],
 
             'groups' => [

@@ -29,6 +29,10 @@ return [
                 'success'            => '成功: 顧客が正常に登録され、ログインしました。',
             ],
 
+            'social-login' => [
+                'disabled' => '警告: ソーシャルログインは無効です。',
+            ],
+
             'login' => [
                 'invalid-creds' => '資格情報を確認して、もう一度お試しください。',
                 'not-activated' => 'アクティベーションには管理者の承認が必要です。',
@@ -65,6 +69,7 @@ return [
                     'delete-success'         => '住所が正常に削除されました。',
                     'not-found'              => '注意: 住所が見つかりません。',
                     'update-success'         => '住所が正常に更新されました。',
+                    'already-default'        => '注意: この住所はすでにデフォルトに設定されています。',
                 ],
 
                 'wishlist' => [
@@ -364,6 +369,7 @@ return [
                 'delete-success'         => '顧客の住所が正常に削除されました。',
                 'not-found'              => '注意: 顧客の住所が見つかりません。',
                 'update-success'         => '顧客の住所が正常に更新されました。',
+                'already-default'        => '注意: この住所はすでにデフォルトに設定されています。',
             ],
 
             'groups' => [

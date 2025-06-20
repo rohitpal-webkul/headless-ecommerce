@@ -15,6 +15,9 @@ extend type Query @guard(with: ["api"]) {
       @builder(method: "Webkul\\GraphQLAPI\\Queries\\Shop\\Customer\\GdprQuary@getGdprRequest")
   ): GDPRDataRequest
     @find(model: "Webkul\\GDPR\\Models\\GDPRDataRequest")
+
+  viewGdprData: GdprViewResponse
+    @field(resolver: "Webkul\\GraphQLAPI\\Queries\\Shop\\Customer\\GdprQuary@viewGdprData")
 }
 
 extend type Mutation @guard(with: ["api"]) {
@@ -33,8 +36,13 @@ extend type Mutation @guard(with: ["api"]) {
 }
 
 input GdprRequestInput {
-  type: String!
+  type: GdprRequestInputType!
   message: String!
+}
+
+enum GdprRequestInputType {
+  UPDATE @enum (value: "update")
+  DELETE @enum (value: "delete")
 }
 
 type GdprRequestResponse {
@@ -77,4 +85,9 @@ input FilterCustomerGdprRequestInput {
   updatedAt: DateTime @rename(attribute: "updated_at")
 }
 
+type GdprViewResponse {
+  customer: Customer
+  address: [Address]
+  order: [Order]
+}
 
